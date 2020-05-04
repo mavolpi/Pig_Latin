@@ -1,27 +1,39 @@
-#def input_word():
-word = raw_input("Enter the word: ") 
-print(' ')
-print("The English word is: " + word)
-print(' ')
+print("""PIG LATIN TRANSLATOR
+""")
+def input_word():
+  global word
+  word = raw_input("Enter the word: ") 
+  print(' ')
+  print("The English word is: " + word)
+  print(' ')
 
+input_word()
 word_length = len(word)
+
+if word_length > 0 and word.isalpha():
   
-#find the first letter
-first_letter = word[0]
+  #find the first letter
+  first_letter = word[0]
 
-#lowercase the first letter
-first_letter_lowercase = first_letter.lower()
+  #lowercase the first letter
+  first_letter_lowercase = first_letter.lower()
 
-#strip the first letter
+  #strip the first letter
 
-stripped_word = word[1:word_length]
+  stripped_word = word[1:word_length]
 
-#add the first letter to the back
-reset_word = stripped_word + first_letter_lowercase
+  #add the first letter to the back
+  reset_word = stripped_word + first_letter_lowercase
 
-#add the ay
-piglatin_word = reset_word +"ay"
+  #add the ay
+  piglatin_word = reset_word +"ay"
 
-#print Pig Latin word
+  #print Pig Latin word
 
-print("The Pig Latin word is: " + piglatin_word)
+  print("The Pig Latin word is: " + piglatin_word)
+  
+else:
+  print(""" Please enter a proper word.
+  """)
+  
+  input_word()
