@@ -1,0 +1,27 @@
+#def input_word():
+word = raw_input("Enter the word: ") 
+print(' ')
+print("The English word is: " + word)
+print(' ')
+
+word_length = len(word)
+  
+#find the first letter
+first_letter = word[0]
+
+#lowercase the first letter
+first_letter_lowercase = first_letter.lower()
+
+#strip the first letter
+
+stripped_word = word[1:word_length]
+
+#add the first letter to the back
+reset_word = stripped_word + first_letter_lowercase
+
+#add the ay
+piglatin_word = reset_word +"ay"
+
+#print Pig Latin word
+
+print("The Pig Latin word is: " + piglatin_word)
