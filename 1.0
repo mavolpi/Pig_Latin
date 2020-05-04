@@ -6,12 +6,8 @@ def input_word():
   print(' ')
   print("The English word is: " + word)
   print(' ')
-
-input_word()
-word_length = len(word)
-
-if word_length > 0 and word.isalpha():
   
+def translate():
   #find the first letter
   first_letter = word[0]
 
@@ -31,9 +27,19 @@ if word_length > 0 and word.isalpha():
   #print Pig Latin word
 
   print("The Pig Latin word is: " + piglatin_word)
+
+input_word()
+word_length = len(word)
+
+if word_length > 0 and word.isalpha():
+  
+  translate()
   
 else:
-  print(""" Please enter a proper word.
+  while not word.isalpha() or word_length <= 0:
+    print(""" Please enter a proper word.
   """)
   
-  input_word()
+    input_word()
+  
+  translate()
